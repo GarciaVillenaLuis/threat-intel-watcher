@@ -112,6 +112,32 @@ class TestCISAWatcher(unittest.TestCase):
         table_out = format_table(watcher.vulnerabilities)
         self.assertIn("CVE-2024-3400", table_out)
         self.assertIn("Palo Alto Networks", table_out)
+        self.assertTrue(table_out.encode("ascii", errors="strict"))
+
+    def test_telemetry_snapshot_fallback(self):
+        snapshot_data = {
+            "last_sync_utc": "2026-11-01T07:30:14.968Z",
+            "total_cves_tracked": 1766,
+            "telemetry": {
+                "critical_severity_count": 477,
+                "ransomware_linked_count": 313
+            }
+        }
+        with tempfile.NamedTemporaryFile("w", delete=False, suffix=".json", encoding="utf-8") as f:
+            json.dump(snapshot_data, f)
+            temp_path = f.name
+
+        try:
+            watcher = CISAWatcher(data_source=temp_path)
+            watcher.load_data()
+            stats = watcher.compute_stats()
+            self.assertEqual(stats["total_records"], 1766)
+            self.assertEqual(stats["ransomware_linked"], 313)
+            self.assertAlmostEqual(stats["ransomware_percentage"], 17.72, places=1)
+            self.assertIn("Microsoft", stats["top_vendors"])
+        finally:
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
 
 
 if __name__ == "__main__":
