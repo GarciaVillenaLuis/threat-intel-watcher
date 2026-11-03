@@ -114,3 +114,8 @@ Daily telemetry digests are automatically published in:
 - [`data/cisa_kev_telemetry.json`](./data/cisa_kev_telemetry.json)
 
 Verified against MITRE ATT&CK Enterprise Matrix and CISA Binding Operational Directive (BOD) 22-01.
+
+
+## 🔒 Security Governance & CodeQL SAST Baseline
+
+This repository enforces continuous semantic code analysis via official **GitHub CodeQL** and automated zero-vulnerability security baselines for all multi-cloud governance modules.
