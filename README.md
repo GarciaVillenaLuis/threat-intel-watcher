@@ -1,6 +1,7 @@
 # Threat Intel Watcher 📡
 
 [![CI/CD Pipeline](https://github.com/GarciaVillenaLuis/threat-intel-watcher/actions/workflows/ci.yml/badge.svg)](https://github.com/GarciaVillenaLuis/threat-intel-watcher/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/GarciaVillenaLuis/threat-intel-watcher/actions/workflows/codeql.yml/badge.svg)](https://github.com/GarciaVillenaLuis/threat-intel-watcher/actions/workflows/codeql.yml)
 [![Telemetry Status](https://img.shields.io/badge/Telemetry-Active%20%26%20Syncing-success?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/GarciaVillenaLuis/threat-intel-watcher)
 [![Catalog Source](https://img.shields.io/badge/Source-CISA%20KEV%20Catalog-0052cc?style=flat-square&logo=securityscorecard&logoColor=white)](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 [![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
