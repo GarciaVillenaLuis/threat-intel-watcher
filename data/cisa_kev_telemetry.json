@@ -1,9 +1,9 @@
 {
-  "last_sync_utc": "2026-11-01T07:30:14.968Z",
+  "last_sync_utc": "2026-11-10T14:30:00Z",
   "total_cves_tracked": 1766,
   "source": "CISA Known Exploited Vulnerabilities (KEV) Catalog",
   "pipeline_status": "OPERATIONAL",
-  "signature": "SHA256:D0BQX0o6Oxnxkz8U6zM6QUyHQFmEc0iDT6qtaJszYGY=",
+  "signature": "SHA256:backfill-test-11-10",
   "telemetry": {
     "critical_severity_count": 477,
     "ransomware_linked_count": 313,
